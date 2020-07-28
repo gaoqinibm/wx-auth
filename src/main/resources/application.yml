@@ -1,0 +1,56 @@
+server:
+  port: 8721
+logging:
+  level: 
+    root: info
+  file:
+    path: log
+
+spring:
+  application:
+    name: wx-auth
+  profiles:
+    active: dev
+  devtools:
+    restart:
+      enabled: true
+
+---
+#开发环境配置
+spring:
+  profiles: dev
+wx:
+  appid: xxxxxxxxxxxxxxxxx
+  appsecret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  callback: http://域名/wxcallback/
+
+---
+#测试环境配置
+spring:
+  profiles: test
+wx:
+  appid: xxxxxxxxxxxxxxxxx
+  appsecret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  callback: http://域名/wxcallback/
+
+---
+#预发环境配置
+spring:
+  profiles: pre
+wx:
+  appid: xxxxxxxxxxxxxxxxx
+  appsecret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  callback: http://域名/wxcallback/
+
+---
+#生产环境配置
+#spring:
+#  profiles: prod
+#wx:
+#  appid: xxxxxxxxxxxxxxxxx
+#  appsecret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#  callback: http://域名/wxcallback/
+
+
+
+
