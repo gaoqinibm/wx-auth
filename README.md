@@ -5,10 +5,10 @@
 用户进入客户端（H5页面），进入登录页面，检测到为微信客户端，进行微信网页授权（实现自动登录或获取用户信息），首先跳转到本服务，本服务获取完微信授权信息后，将用户信息返回给客户端的登陆页。
 
 ### 使用方法
-- 修改yml文件配置，假设该项目访问网址为 http://190gs90623.iok.la
-- 完整的跳转网址例子，http://190gs90623.iok.la/wxlogin?targetUrl=http://preh5.psgxs.com 或 http://190gs90623.iok.la/wxlogin?targetUrl=http://preactivity.psgxs.com/index/turnTable
+- 修改yml文件配置，假设该项目访问网址为 http://域名
+- 完整的跳转网址例子，http://domain/wxlogin?targetUrl=目标url 或 http://domain/wxlogin?targetUrl=目标url?ref=/goods/detail/1
 - targetUrl=后面为客户端地址，也就是登录页地址
-- 需要对targetUrl=后面内容进行urlencode
+- 首先对ref=后面内容进行urlencode，再对targetUrl=后面内容进行urlencode
 
 ### 前端调用
 - 传入目标地址，即targetUrl
